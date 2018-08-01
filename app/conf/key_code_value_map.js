@@ -72,7 +72,7 @@ const KEY_CODE_VALUE_MAP = {
     "k18": "Alt",
     "k20": "Cape Lock",
     "k27": "Esc",
-    "k32": "Spacebar",
+    "k32": "Spacebar",//空格
     "k33": "Page Up",
     "k34": "Page Down",
     "k35": "End",

@@ -33,8 +33,22 @@ $(document).keydown(function (event) {
 function battleEvent(key_code) {
     if (`F1` === ckctv(key_code)) {
         endBattle();
+    }else if(`Spacebar` === ckctv(key_code)){
+        shoot();
+    }else{
+        generateEnergy(key_code);
     }
-    generateEnergy(key_code);
+    
+}
+function shoot() {
+    let damage = lhe.length+rhe.length;
+    let e_1_hp = $(`#enemy_1_hp`);
+    e_1_hp_value = e_1_hp.html()-damage;
+    e_1_hp.html(e_1_hp_value>=0?e_1_hp_value:0);
+    cleanEnergy();
+    if(e_1_hp_value<=0){
+        endBattle();
+    }
 }
 function generateEnergy(key_code) {
     let value = ckctv(key_code);
@@ -45,6 +59,22 @@ function getHandArea(value) {
 }
 function gev(value) {
     return getEnergyValue(value);
+}
+function cleanEnergy(area){
+    if(HAND_AREA.L === area){
+        let lma = $(`#lh_magic_area`);
+        lma.html(``);
+        lhe = [];
+        return;
+    }else if(HAND_AREA.R === area){
+        let rma = $(`#rh_magic_area`);
+        rma.html(``);
+        rhe = [];
+        return;
+    }else{
+        cleanEnergy(HAND_AREA.L);
+        cleanEnergy(HAND_AREA.R);
+    }
 }
 function pushEnergyToHand(value, energy, area) {
     let lma = $(`#lh_magic_area`);
