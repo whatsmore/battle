@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="./resource/jquery-3.3.1.min.js"></script>
+<style>
+    .disappear {
+        display: none;
+    }
+</style>
+<script>if (typeof module === 'object') {
+        window.jQuery = window.$ = module.exports;
+    }</script>
+<div id="map">
+</div>
+<div id="battlefield">
+    <div id="enemy_area">
+        <div class="combatant" id="enemy_1">
+            <div>头像</div>
+            <div id="name_area">name:
+                <span>enemy</span>
+            </div>
+            <div id="hp_area">hp:
+                <span>100</span>
+            </div>
+            <div id="mp_area">mp:
+                <span>50</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="team_area">
+        <div class="combatant" id="teammate_1">
+            <div>头像</div>
+            <div id="name_area">name:
+                <span>yourself</span>
+            </div>
+            <div id="hp_area">hp:
+                <span>100</span>
+            </div>
+            <div id="mp_area">mp:
+                <span>50</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="left_hand">
+        left_hand
+        <div id="lh_magic_area"></div>
+    </div>
+    <div id="right_hand">
+        right_hand
+        <div id="rh_magic_area"></div>
+    </div>
+</div>
+
+</div>
+<script src="./conf/key_code_value_map.js"></script>
+<script src="./conf/value_energy_map.js"></script>
+<script src="./conf/value_hand.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
