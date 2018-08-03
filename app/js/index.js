@@ -40,7 +40,14 @@ function battleEvent(key_code) {
     }
     
 }
+// $("#msg").hover(function(){
+//     $(this).fadeOut(1000);
+//   });
 function shoot() {
+    let msg = $(`#msg`);
+    msg.html(`火球术`);
+    msg.css(`display`,`block`);
+    msg.fadeOut(1000);
     let damage = lhe.length+rhe.length;
     let e_1_hp = $(`#enemy_1_hp`);
     e_1_hp_value = e_1_hp.html()-damage;

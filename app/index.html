@@ -9,6 +9,9 @@
     .disappear {
         display: none;
     }
+    .appear{
+        display: block;
+    }
 </style>
 <script>if (typeof module === 'object') {
         window.jQuery = window.$ = module.exports;
@@ -50,13 +53,17 @@
         left_hand
         <div id="lh_magic_area"></div>
     </div>
+
     <div id="right_hand">
         right_hand
         <div id="rh_magic_area"></div>
     </div>
 </div>
+<div id="msg"></div>
+<script>
+      $("#msg").load("html/test.html");
+</script>
 
-</div>
 <script src="./conf/key_code_value_map.js"></script>
 <script src="./conf/value_energy_map.js"></script>
 <script src="./conf/value_hand.js"></script>
